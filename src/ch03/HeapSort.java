@@ -65,8 +65,8 @@ public class HeapSort {
 	 * 1. 개요 : 배열 정보를 이용해서 힙으로 생성하는 메소드 
 	 * 2. 처리내용 : 
 	 * </pre>
-	 * @param intArray
-	 * @param endIndex
+	 * @param intArray 배열
+	 * @param endIndex 마지막 인덱스
 	 */
 	private static void buildHeap(int[] intArray, int endIndex) {
 
@@ -86,14 +86,14 @@ public class HeapSort {
 	 * 1. 개요 : intArray[x]를 힙 조건이 만족될 때까지 트리의 아래 층으로 내려 보낸다
 	 * 2. 처리내용 : 
 	 * </pre>
-	 * @param intArray
-	 * @param i
-	 * @param j
-	 * @param endIndex
+	 * @param intArray 배열
+	 * @param x 인텍스
+	 * @param checkIndex 체크할 인덱스
+	 * @param endIndex 마지막 인덱스
 	 */
 	private static void pushDown(int[] intArray, int x, int checkIndex, int endIndex) {
 
-		int largeChildIndex = findLarger(intArray, x, endIndex);	// 큰값을 갖는 x의 자식의 인덱스 
+		int largeChildIndex = findLarger(intArray, x, endIndex);	// A[x]보다 더 큰 값을 갖는 x의 자식의 인덱스
 		
 		while (intArray[x] < intArray[largeChildIndex]) { // 현재 x와 자식을 비교한 후 교환  
 			// 교환
@@ -103,7 +103,7 @@ public class HeapSort {
 
 			x = largeChildIndex;	// x를 변경 
 
-			largeChildIndex = findLarger(intArray, x, endIndex);	// 큰값을 갖는 x의 자식의 인덱스
+			largeChildIndex = findLarger(intArray, x, endIndex);	//  A[x]보다 더 큰 값을 갖는 x의 자식의 인덱스
 		}
 	}
 
