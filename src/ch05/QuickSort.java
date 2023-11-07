@@ -30,6 +30,7 @@ public class QuickSort
 		if(low < high) 
 		{
 			int pivot = partition(arr, low, high);
+			System.out.println("피벗: " + arr[pivot]);
 			printArray(arr);
 			quickSort(arr, low, pivot -1);
 			quickSort(arr, pivot + 1, high);
@@ -102,8 +103,8 @@ public class QuickSort
 	{
 		QuickSort qs = new QuickSort();
 		
-		//int intArray[] = {15, 22, 13, 27, 12, 10, 20, 25, 32};
-		int intArray[] = {55, 99, 66, 77, 44, 88};
+		int intArray[] = {15, 22, 13, 27, 12, 10, 20, 25};
+		//int intArray[] = {55, 99, 66, 77, 44, 88};
 
         System.out.println("주어진 배열");
         qs.printArray(intArray);
