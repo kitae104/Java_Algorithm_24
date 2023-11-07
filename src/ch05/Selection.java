@@ -31,7 +31,7 @@ public class Selection
 			return selection(arr, first, p-1, k);
 		}
 		else if (k == s + 1) {
-			return arr[p];						// k번재 작은 원소를 찾은 경우 			
+			return arr[p];						// k번재 작은 원소를 찾은 경우(답을 찾은 경우)
 		}
 		else {									// Large 그룹에서 찾기 
 			return selection(arr, p+1, last, k - s - 1);
