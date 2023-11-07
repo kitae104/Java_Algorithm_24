@@ -7,7 +7,7 @@ package ch06;
  * </pre>
  *	
  * @author	: 김기태
- * @Date  	: 2021. 8. 21.
+ * @Date  	: 2023. 11. 04.
  * @Version	:
  */
 public class RodCutting
@@ -52,8 +52,7 @@ public class RodCutting
 	 */
 	public int cutRod_DP(int[] priceArray, int i)
 	{
-		//System.out.println(++cnt);
-		int maxSell[] = new int[i + 1];   	// 하나 큰 값으로 설정 
+		int maxSell[] = new int[i + 1];   	// 하나 큰 값으로 설정
 		
 		maxSell[0] = 0;
 		
@@ -91,5 +90,4 @@ public class RodCutting
 		secDiffTime = (afterTime - beforeTime);		 		//두 시간에 차 계산
 		System.out.println("시간차이(m) : "+secDiffTime);
 	}
-
 }
