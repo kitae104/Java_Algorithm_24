@@ -19,7 +19,7 @@ public class CoinChange
 	 * 2. 처리내용 : 
 	 * </pre>
 	 * @param numCoin
-	 * @param numCoin2 
+	 * @param numCoin
 	 * @return
 	 */
 	public int calcCoin(int[] coinValue, int[] numCoin)
