@@ -23,7 +23,7 @@ public class AllPairsShortestPath
 	 */
 	public void findAllPairShortestPath(int[][] graph, int n)
 	{
-		int dist[][] = new int[n][n];	// 거리 계산
+		int dist[][] = new int[n][n];	// 거리 계산을 위한 행렬
 		
 		// 행렬 dist를 가중치 행렬 graph로 초기화 한다. 
 		for (int i = 0; i < n; i++)
@@ -60,7 +60,7 @@ public class AllPairsShortestPath
 	 */
 	public void printSolution(int[][] dist, int n, int k)
 	{
-		System.out.println("모든 두 정점들의 쌍사이의 최단 거리 행렬 : " + k);
+		System.out.println("모든 두 정점들의 쌍사이의 최단 거리 행렬 : 노드 " + (k+1) + "를 중간 정점으로 추가한 후");
 		
 		for (int i = 0; i < n; i++)
 		{
