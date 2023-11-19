@@ -19,7 +19,7 @@ public class PrimeMST
 	 * @param w
 	 * @param n
 	 */
-	private void primMST(int[][] w, int n)
+	private void primMST(int[][] W, int n)
 	{
 		int[] near = new int[n];				// 각 청색 정점에 가장 가까운 적색 정점을 저장하는 배열 
 		boolean[] isBlue = new boolean[n];		// 각 정점이 청색이면 true를 아니면 false를 저장하는 배열
@@ -49,9 +49,9 @@ public class PrimeMST
 			{
 				if(isBlue[b])			// 청색 정점이면 
 				{
-					if(w[b][near[b]] < minVal)
+					if(W[b][near[b]] < minVal)
 					{
-						minVal = w[b][near[b]];		// minVal 값 갱신 
+						minVal = W[b][near[b]];		// minVal 값 갱신
 						newRed = b;
 					}
 				}
@@ -60,21 +60,20 @@ public class PrimeMST
 			isBlue[newRed] = false;		// 청색 정점 newRed를 적색으로 변경
 			
 			// 가중치가 가장 작은 간선을 T에 추가 
-			System.out.println((char)(near[newRed] + 'a') + " - " + (char)(newRed + 'a') + "\t  " + w[newRed][near[newRed]]);
+			System.out.println((char)(near[newRed] + 'a') + " - " + (char)(newRed + 'a') + "\t  " + W[newRed][near[newRed]]);
 
 			// 청색 정점에 가장 가까운 적색 정점을 새로이 적색이 된 정점을 반영하여 갱신
 			for (int b = 0; b < n; b++)
 			{
 				if(isBlue[b])
 				{
-					if(w[b][newRed] < w[b][near[b]])
+					if(W[b][newRed] < W[b][near[b]])
 					{
 						near[b] = newRed;						
 					}
 				}
 			}
 		}
-		
 	}
 	
 	public static void main(String[] args)
@@ -82,7 +81,7 @@ public class PrimeMST
 
 		PrimeMST mst = new PrimeMST();
 
-		int graph[][] = new int[][]
+		int W[][] = new int[][]
 		{
 				{ 0, 2, INF, INF, 4 },
 				{ 2, 0, 8, INF, 4 },
@@ -91,7 +90,7 @@ public class PrimeMST
 				{ 4, 4, 6, 3, 0 },				
 		};
 		
-		mst.primMST(graph, 5);
+		mst.primMST(W, 5);
 
 	}
 
