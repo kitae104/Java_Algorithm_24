@@ -80,7 +80,7 @@ public class Knapsack2
 	public static void main(String[] args)
 	{
 		Knapsack2 ks = new Knapsack2();
-		int value[] = {30, 20, 40, 10};	// 물건의 가치 배열
+		int value[] = {30, 20, 40, 50};	// 물건의 가치 배열
 		int weight[] = {1,2,3,4};	// 물건의 무게 배열
 		int capacity = 5;				// 배낭의 용량
 		int n = value.length;			// 물건 수 
