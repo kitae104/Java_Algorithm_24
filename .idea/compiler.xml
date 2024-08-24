@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Java_Algorithm_23" />
+        <module name="Java_Algorithm_24" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="17">
-      <module name="Java_Algorithm_21" target="17" />
+      <module name="Java_Algorithm_24" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>
