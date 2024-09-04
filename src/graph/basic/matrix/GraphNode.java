@@ -10,5 +10,4 @@ public class GraphNode {
     private int index;   // 노드 인덱스
 
 
-
 }

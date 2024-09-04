@@ -12,12 +12,14 @@ public class AdjacencyMatrixMain {
         nodeList.add(new GraphNode("E", 4));
 
         Graph g = new Graph(nodeList);
-        g.addUndirectedEdge(0, 1);
-        g.addUndirectedEdge(0, 2);
-        g.addUndirectedEdge(0, 3);
-        g.addUndirectedEdge(1, 4);
-        g.addUndirectedEdge(2, 3);
-        g.addUndirectedEdge(3, 4);
+
+        g.addUndirectedEdge('A', 'B');
+        g.addUndirectedEdge('A', 'D');
+        g.addUndirectedEdge('A', 'E');
+        g.addUndirectedEdge('B', 'C');
+        g.addUndirectedEdge('B', 'D');
+        g.addUndirectedEdge('C', 'D');
+        g.addUndirectedEdge('D', 'E');
 
         System.out.println(g);
     }
