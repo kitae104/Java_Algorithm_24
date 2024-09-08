@@ -1,8 +1,8 @@
-package graph.basic.list;
+package graph.basic.list.bfsdfs;
 
 import java.util.ArrayList;
 
-public class AdjacencyListMain {
+public class BfsDfsListMain {
     public static void main(String[] args) {
         ArrayList<GraphNode> nodeList = new ArrayList<GraphNode>();
         nodeList.add(new GraphNode("A", 0));
@@ -20,6 +20,19 @@ public class AdjacencyListMain {
         g.addUndirectedEdge(2, 3);
         g.addUndirectedEdge(3, 4);
 
+        System.out.println("==== 인접 리스트 ====");
         System.out.println(g);
+
+        System.out.println("==== BFS ====");
+        g.bfs();
+        System.out.println();
+
+        // visited 초기화 - 이전 작업에 의해 노드가 방문되었으므로 초기화 필요
+        for (GraphNode node : nodeList) {
+            node.setVisited(false);
+        }
+
+        System.out.println("\n==== DFS ====");
+        g.dfs();
     }
 }

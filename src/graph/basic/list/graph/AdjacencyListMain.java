@@ -1,8 +1,8 @@
-package graph.basic.matrix;
+package graph.basic.list.graph;
 
 import java.util.ArrayList;
 
-public class AdjacencyMatrixMain {
+public class AdjacencyListMain {
     public static void main(String[] args) {
         ArrayList<GraphNode> nodeList = new ArrayList<GraphNode>();
         nodeList.add(new GraphNode("A", 0));
@@ -13,13 +13,12 @@ public class AdjacencyMatrixMain {
 
         Graph g = new Graph(nodeList);
 
-        g.addUndirectedEdge('A', 'B');
-        g.addUndirectedEdge('A', 'D');
-        g.addUndirectedEdge('A', 'E');
-        g.addUndirectedEdge('B', 'C');
-        g.addUndirectedEdge('B', 'D');
-        g.addUndirectedEdge('C', 'D');
-        g.addUndirectedEdge('D', 'E');
+        g.addUndirectedEdge(0, 1);
+        g.addUndirectedEdge(0, 2);
+        g.addUndirectedEdge(0, 3);
+        g.addUndirectedEdge(1, 4);
+        g.addUndirectedEdge(2, 3);
+        g.addUndirectedEdge(3, 4);
 
         System.out.println(g);
     }

@@ -1,4 +1,4 @@
-package graph.basic.list;
+package graph.basic.list.graph;
 
 import lombok.Data;
 

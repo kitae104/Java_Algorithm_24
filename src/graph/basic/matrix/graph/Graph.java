@@ -1,4 +1,4 @@
-package graph.basic.matrix;
+package graph.basic.matrix.graph;
 
 import java.util.ArrayList;
 
