@@ -1,4 +1,4 @@
-package graph.basic.matrix.bfsdfs;
+package graph.basic.matrix;
 
 import lombok.Data;
 

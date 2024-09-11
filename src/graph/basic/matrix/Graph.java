@@ -1,4 +1,4 @@
-package graph.basic.matrix.bfsdfs;
+package graph.basic.matrix;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -121,6 +121,46 @@ public class Graph {
             if(!node.isVisited()){
                 dfsVisit(node);
             }
+        }
+    }
+
+    //===============================
+    // Topolicical Sort
+    //===============================
+
+    /**
+     * 방향을 가지는 간선 추가
+     * @param i
+     * @param j
+     */
+    public void addDirectedEdge(int i, int j) {
+        i = i - 'A';
+        j = j - 'A';
+        adjacencyMatrix[i][j] = 1;
+    }
+
+    public void topologicalVisit(GraphNode node, Stack<GraphNode> stack){
+        ArrayList<GraphNode> neighbors = getNeighbors(node); // 현재 노드에 인접한 노드들을 가져옴
+        for (GraphNode neighbor : neighbors) {
+            if(!neighbor.isVisited()){  // 방문하지 않은 노드라면
+                topologicalVisit(neighbor, stack);  // dfs 탐색
+            }
+        }
+        // 더 이상 이웃이 없는 경우라면 스택에 추가
+        node.setVisited(true);  // 방문한 노드로 표시
+        stack.push(node);       // 스택에 추가
+    }
+
+    public void topologicalSort() {
+        Stack<GraphNode> stack = new Stack<GraphNode>();    // 스택 생성
+        for (GraphNode node : nodeList) {   // 모든 노드에 대해 --> 첫번째 노드로부터 탐색
+            if(!node.isVisited()){  // 방문하지 않은 노드라면
+                topologicalVisit(node, stack);  // dfs 탐색
+            }
+        }
+        // 스택에 있는 노드들을 출력
+        while(!stack.isEmpty()){
+            System.out.print(stack.pop().getName() + " ");
         }
     }
 }

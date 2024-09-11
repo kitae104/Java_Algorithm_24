@@ -1,8 +1,8 @@
-package graph.basic.matrix.bfsdfs;
+package graph.basic.matrix;
 
 import java.util.ArrayList;
 
-public class BfsDfsMatrixMain {
+public class AdjacencyMatrixMain {
     public static void main(String[] args) {
         ArrayList<GraphNode> nodeList = new ArrayList<GraphNode>();
         nodeList.add(new GraphNode("A", 0));
