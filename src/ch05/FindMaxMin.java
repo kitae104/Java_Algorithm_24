@@ -46,9 +46,13 @@ public class FindMaxMin {
 	    	
 	    	if(leftResult[0] < rightResult[0]) {
 	    		result[0] = leftResult[0];					// 최소값 유지 
+	    	} else {
+	    		result[0] = rightResult[0];
 	    	}
 	    	if(leftResult[1] < rightResult[1]) {
 	    		result[1] = rightResult[1];					// 최대값 유지 
+	    	} else {
+	    		result[1] = leftResult[1];
 	    	}
 	    }
 		return result;

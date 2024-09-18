@@ -1,5 +1,7 @@
 package ch05;
 
+import java.util.Arrays;
+
 /**
  * <pre>
  * 합병 정렬
@@ -115,7 +117,7 @@ public class MergeSort {
 		// 정렬하기 전 배열 요소들을 출력한다
         System.out.println("주어진 배열");
         ms.printArray(intArray);
-        
+
         ms.mergeSort(intArray, 0, intArray.length-1);	// 병합 정렬 메소드 호출 
         
         // 정렬 후 배열 요소들을 출력한다

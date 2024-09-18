@@ -29,7 +29,7 @@ public class TopologicalSortMatrixMain {
         g.addDirectedEdge('E', 'F');
         g.addDirectedEdge('F', 'G');
 
-        System.out.println("==== 인접 리스트 ====");
+        System.out.println("==== 인접 그래프 ====");
         System.out.println(g);
 
         System.out.println("==== 위상 정렬 ====");
