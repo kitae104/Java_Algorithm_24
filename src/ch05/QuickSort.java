@@ -103,16 +103,16 @@ public class QuickSort
 	{
 		QuickSort qs = new QuickSort();
 		
-		int intArray[] = {15, 22, 13, 27, 12, 10, 20, 25};
+		int arr[] = {15, 22, 13, 27, 12, 10, 20, 25};
 		//int intArray[] = {55, 99, 66, 77, 44, 88};
 
         System.out.println("주어진 배열");
-        qs.printArray(intArray);
 
 
-        qs.quickSort(intArray, 0, intArray.length - 1);
+
+        qs.quickSort(arr, 0, arr.length - 1);
 
         System.out.println("\n정렬된 배열");
-        qs.printArray(intArray);
+        qs.printArray(arr);
 	}
 }
