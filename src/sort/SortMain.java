@@ -4,15 +4,12 @@ import utils.print.MyPrint;
 
 public class SortMain {
     public static void main(String[] args) {
-        BubbleSort bubbleSort = new BubbleSort();
-        int[] arr = {64, 34, 25, 12, 22, 11, 90};
-        int[] sorted = bubbleSort.bubbleSort(arr);
-        System.out.println("Bubble Sort : ");
-        MyPrint.printArray(sorted);
 
-        int[] arr2 = {64, 11, 25, 12, 22, 90, 34};
-        QuickSort.quickSort(arr2, 0, arr2.length - 1);
-        System.out.println("Quick Sort : ");
-        MyPrint.printArray(arr2);
+        int[] arr = {5, 3, 4, 7, 2, 8, 6, 9, 1};
+        BucketSort bs = new BucketSort(arr);
+        MyPrint.printArray(arr);
+        bs.bucketSort();
+        System.out.println("\nBucket Sort : ");
+        MyPrint.printArray(arr);
     }
 }
