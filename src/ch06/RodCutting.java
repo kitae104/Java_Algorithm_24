@@ -1,5 +1,7 @@
 package ch06;
 
+import java.util.Arrays;
+
 /**
  * <pre>
  * 막대 자르기 알고리즘 
@@ -66,6 +68,8 @@ public class RodCutting
 				max_val = Math.max(max_val, priceArray[k - 1] + maxSell[j - k]);
 			}
 			maxSell[j] = max_val;
+			Arrays.stream(maxSell).forEach(n -> System.out.printf("%5d", n));
+			System.out.println();
 		}
 		return maxSell[i];
 	}
@@ -74,7 +78,7 @@ public class RodCutting
 	{
 		RodCutting rc = new RodCutting();
 		
-		int[] priceArray = new int[] {2, 5, 9, 10};
+		int[] priceArray = {1, 2, 3, 6, 8, 9, 9, 10, 15, 40, 45, 50, 55, 55};
 		int size = priceArray.length;
 
 		long beforeTime = System.currentTimeMillis(); 		//코드 실행 전에 시간 받아오기		
