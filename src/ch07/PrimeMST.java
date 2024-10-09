@@ -81,7 +81,7 @@ public class PrimeMST
 
 		PrimeMST mst = new PrimeMST();
 
-		int W[][] = new int[][]
+		int W[][] = new int[][]	// 가중치 행렬
 		{
 				{ 0, 2, INF, INF, 4 },
 				{ 2, 0, 8, INF, 4 },
