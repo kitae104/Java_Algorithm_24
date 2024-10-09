@@ -1,6 +1,6 @@
 package QnA;
 
-import graph.basic.list.GraphNode;
+import algorithm.graph.basic.list.GraphNode;
 
 import java.util.ArrayList;
 
