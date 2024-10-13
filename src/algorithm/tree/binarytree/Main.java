@@ -1,5 +1,8 @@
 package algorithm.tree.binarytree;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class Main {
     public static void main(String[] args) {
         BinaryTreeLinkedList binaryTree = new BinaryTreeLinkedList();
@@ -25,5 +28,13 @@ public class Main {
 
         System.out.println("\n\nBinary Tree : 후위 순회");
         binaryTree.postOrder(binaryTree.getRoot());
+
+        System.out.println("\n\nBinary Tree : 레벨 순회");
+        binaryTree.levelOrder(binaryTree.getRoot());
+
+        System.out.println("\n\nBinary Tree : 값 검색하기 ");
+        binaryTree.search(binaryTree.getRoot(), "/");
     }
+
+
 }
