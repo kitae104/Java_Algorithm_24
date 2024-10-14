@@ -1,4 +1,4 @@
-package algorithm.tree.binarytree;
+package algorithm.tree.binarytree.list;
 
 public class Main2 {
     public static void main(String[] args) {

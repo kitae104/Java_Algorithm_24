@@ -1,7 +1,4 @@
-package algorithm.tree.binarytree;
-
-import java.util.LinkedList;
-import java.util.Queue;
+package algorithm.tree.binarytree.list;
 
 public class Main {
     public static void main(String[] args) {

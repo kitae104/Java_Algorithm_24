@@ -1,4 +1,4 @@
-package algorithm.tree.binarytree;
+package algorithm.tree.binarytree.list;
 
 import lombok.Data;
 
