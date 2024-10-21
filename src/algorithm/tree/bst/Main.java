@@ -12,6 +12,14 @@ public class Main {
         bst.insert(100);
         bst.insert(20);
         bst.insert(40);
-        bst.insert(55);
+
+        System.out.println("\n\n전위 순회");
+        bst.preOrder(bst.getRoot());
+
+        System.out.println("\n\n중위 순회");
+        bst.inOrder(bst.getRoot());
+
+        System.out.println("\n\n후위 순회");
+        bst.postOrder(bst.getRoot());
     }
 }
