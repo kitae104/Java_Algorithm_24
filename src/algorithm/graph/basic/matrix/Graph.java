@@ -17,8 +17,8 @@ public class Graph {
 
     // 무방향 그래프 간선 추가
     public void addUndirectedEdge(int i, int j){
-        i = i - 'A';
-        j = j - 'A';
+        i = i - '1';
+        j = j - '1';
         adjacencyMatrix[i][j] = 1;
         adjacencyMatrix[j][i] = 1;
     }
@@ -134,8 +134,8 @@ public class Graph {
      * @param j
      */
     public void addDirectedEdge(int i, int j) {
-        i = i - 'A';
-        j = j - 'A';
+        i = i - '1';
+        j = j - '1';
         adjacencyMatrix[i][j] = 1;
     }
 
