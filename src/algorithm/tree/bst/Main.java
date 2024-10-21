@@ -1,5 +1,7 @@
 package algorithm.tree.bst;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         BinarySearchTree bst = new BinarySearchTree();
@@ -21,5 +23,16 @@ public class Main {
 
         System.out.println("\n\n후위 순회");
         bst.postOrder(bst.getRoot());
+
+        System.out.println("\n\n레벨 순회");
+        bst.levelOrder(bst.getRoot());
+
+        System.out.println("\n\n트리 검색");
+        System.out.println("검색하려는 값을 입력하세요 :");
+        Scanner sc = new Scanner(System.in);
+        int findValue = sc.nextInt();
+        bst.search(bst.getRoot(), findValue);
+        sc.close();
+
     }
 }
