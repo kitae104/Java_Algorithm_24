@@ -13,7 +13,7 @@ package ch03;
 public class HeapSort {
 
 	public static void main(String[] args) {
-		int[] intArray = {0, 1, 2, 6, 4, 8, 7};
+		int[] intArray = {0, 2, 7, 5, 3, 9, 1, 8};
 		
 		// 정렬하기 전 배열을 출력한다
 		System.out.print("정렬 전 배열: ");
@@ -43,6 +43,9 @@ public class HeapSort {
 
 		// 주어진 배열을 힙으로 만든다
 		buildHeap(intArray, endIndex);
+		System.out.print("\n힙 생성 후 배열: ");
+		for (int i = 1; i < intArray.length; i++)
+			System.out.print(intArray[i] + "  ");
 
 		// 힙에서 최대값을 제거하고 남은 트리를 다시 힙으로 만든다
 		while (endIndex > 1) {
