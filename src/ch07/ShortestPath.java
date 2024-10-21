@@ -35,7 +35,7 @@ public class ShortestPath
 		{
 			d[i] = Integer.MAX_VALUE;		// 모든 정점의 출발 정점으로부터 최단 거리를  가장 큰 정수로 초기화
 			T[i] = false;					// 모든 정점이  최단 경로 트리에 포함되지 않음
-			p[i] = -1;						// 모든 정점의  최단 경로 트리에서 부모 노드를 -1로 초기화
+//			p[i] = -1;						// 모든 정점의  최단 경로 트리에서 부모 노드를 -1로 초기화
 		}
 		
 		d[start] = 0;						// 출발 정점의 최단 거리를  0으로 설정
@@ -130,7 +130,7 @@ public class ShortestPath
 		ShortestPath sp = new ShortestPath();
 				
 		// W[][]: 주어진 그래프의 인접 행렬 표현
-		int W[][] = new int[][] {
+		int[][] W = new int[][] {
 			{0, 2, INF, INF, 7},
 			{2, 0, 5, INF, 1},
 			{INF, 5, 0, 4, 3},
