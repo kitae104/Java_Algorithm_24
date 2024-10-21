@@ -25,6 +25,56 @@ public class BinarySearchTree {
     }
 
     public void insert(int value) {
-        insert(root, value);
+        root = insert(root, value);
+    }
+
+    /**
+     * 전위 순회
+     * @param node
+     */
+    public void preOrder(BinaryNode node) {
+        if(node == null) {
+            return;
+        }
+        System.out.print(node.getValue() + " ");
+        preOrder(node.getLeft());
+        preOrder(node.getRight());
+    }
+
+    /**
+     * 중위 순회
+     * @param node
+     */
+    public void inOrder(BinaryNode node) {
+        if (node == null) {
+            return;
+        }
+        inOrder(node.getLeft());
+        System.out.print(node.getValue() + " ");
+        inOrder(node.getRight());
+    }
+
+    /**
+     * 후위 순회
+     * @param node
+     */
+    public void postOrder(BinaryNode node) {
+        if (node == null) {
+            return;
+        }
+        postOrder(node.getLeft());
+        postOrder(node.getRight());
+        System.out.print(node.getValue() + " ");
+    }
+
+    /**
+     * 레벨 순회
+     * @param node
+     */
+    public void levelOrder(BinaryNode node) {
+        if (node == null) {
+            return;
+        }
+
     }
 }
