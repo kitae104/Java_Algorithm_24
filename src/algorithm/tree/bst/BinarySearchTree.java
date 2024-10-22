@@ -109,4 +109,57 @@ public class BinarySearchTree {
             return search(node.getRight(), value);
         }
     }
+
+    /**
+     * 최소값을 갖는 노드 찾기
+     * @param root
+     * @return
+     */
+    public BinaryNode minimumNode(BinaryNode root){
+        if(root.getLeft() == null){
+            return root;
+        } else {
+            return minimumNode(root.getLeft());
+        }
+    }
+
+    /**
+     * BST 노드 삭제
+     * @param root
+     * @param value
+     * @return
+     */
+    public BinaryNode deleteNode(BinaryNode root, int value){
+        if(root == null){
+            System.out.println("BST에서 해당 값을 찾지 못했습니다.");
+            return null;
+        }
+        if(value < root.getValue()){   // 루트의 값보다 찾으려면 값이 작은 경우
+            root.setLeft(deleteNode(root.getLeft(), value));
+        } else if(value > root.getValue()){ // 찾으려는 값이 루트의 값보다 큰 경우
+            root.setRight(deleteNode(root.getRight(), value));
+        } else {
+            if(root.getLeft() != null && root.getRight() != null){  // 양쪽 자식이 있는 경우
+                BinaryNode temp = root;
+                BinaryNode minNodeForRight = minimumNode(temp.getRight());
+                root.setValue(minNodeForRight.getValue());
+                root.setRight(deleteNode(root.getRight(), minNodeForRight.getValue()));
+            } else if (root.getLeft() != null){ // 왼쪽 자식만 있는 경우
+                root = root.getLeft();
+            } else if (root.getRight() != null){ // 오른쪽 자식만 있는 경우
+                root = root.getRight();
+            } else {
+                root = null;
+            }
+        }
+        return root;
+    }
+
+    /**
+     * BST 삭제
+     */
+    public void deleteBST(){
+        root = null;
+        System.out.println("BST를 삭제했습니다.");
+    }
 }
