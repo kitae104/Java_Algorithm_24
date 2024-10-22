@@ -28,11 +28,17 @@ public class Main {
         bst.levelOrder(bst.getRoot());
 
         System.out.println("\n\n트리 검색");
-        System.out.println("검색하려는 값을 입력하세요 :");
-        Scanner sc = new Scanner(System.in);
-        int findValue = sc.nextInt();
-        bst.search(bst.getRoot(), findValue);
-        sc.close();
+        //System.out.println("검색하려는 값을 입력하세요 :");
+        //Scanner sc = new Scanner(System.in);
+        //int findValue = sc.nextInt();
+        bst.search(bst.getRoot(), 40);
+        //sc.close();
+
+        System.out.println("\n\n트리 삭제");
+        bst.deleteNode(bst.getRoot(), 90);
+
+        System.out.println("\n\n레벨 순회");
+        bst.levelOrder(bst.getRoot());
 
     }
 }
