@@ -72,7 +72,7 @@ public class Permute
 
 		Permute p = new Permute();
 
-		int N = 5;
+		int N = 3;
 		int[] A = new int[N];
 
 		System.out.println("생성된 순열\n");
